@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Scraper</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      width: 320px;
+      padding: 1.25rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: white;
+      color: #111;
+    }
+    
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      padding: 0.75rem 1rem;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      border: none;
+    }
+    
+    .button-primary {
+      background-color: #111; /* Black button */
+      color: white;
+    }
+    
+    .button-primary:hover {
+      opacity: 0.9;
+    }
+    
+    #scan-button {
+      width: 100%;
+      height: 3rem;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    #status {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.875rem;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      background-color: #f5f5f5;
+      min-height: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="icons/logo_to_use_48.png" width="28" height="28" alt="Table Scraper Logo" style="margin-right: 8px;">
+      Table Scraper
+    </h1>
+  </header>
+  
+  <button id="scan-button" class="button-primary">
+    Scan Page for Tables
+  </button>
+  
+  <div id="status"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

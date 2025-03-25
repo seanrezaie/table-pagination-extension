@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Table Scraper",
+    "version": "1.0",
+    "description": "Chrome extension to detect, scrape, and export HTML tables from web pages",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "clipboardWrite"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/logo_to_use_16.png",
+        "48": "icons/logo_to_use_48.png",
+        "128": "icons/logo_to_use_128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/logo_to_use_16.png",
+      "48": "icons/logo_to_use_48.png",
+      "128": "icons/logo_to_use_128.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["viewer.html", "viewer.js"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
